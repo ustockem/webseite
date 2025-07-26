@@ -20,8 +20,10 @@ require_once __DIR__ . '/functions.php';
   <link rel="stylesheet" href="<?= BASE_PATH ?>/vendor/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="<?= CSS_PATH ?>/styles.css?v=<?= ASSET_VERSION ?>">
 
-  <script src="<?= BASE_PATH ?>/consent.js?v=<?= ASSET_VERSION ?>"></script>
+  <!-- Optional: Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
+  <script src="<?= BASE_PATH ?>/consent.js?v=<?= ASSET_VERSION ?>"></script>
 </head>
 <body>
 
@@ -39,18 +41,13 @@ require_once __DIR__ . '/functions.php';
   <!-- Desktop Header (≥ 768px) -->
   <div class="header-top py-3 d-none d-md-block">
     <div class="container d-flex align-items-center gap-3">
-      
-      <!-- 🖼️ Logo wieder einbauen -->
       <div class="d-flex align-items-center gap-2">
         <img src="<?= IMG_PATH ?>/Logo_AiN_transparent_weiss10.svg" alt="Logo der muTiger-Schule" width="36">
       </div>
-
-      <!-- 🧠 Textblock -->
       <div>
         <h1 class="mb-0 h4">muTiger-Schule</h1>
         <p class="mb-0 small slogan-text">Impulse für Prävention & Persönlichkeitsstärkung in Bildungseinrichtungen</p>
       </div>
-      
     </div>
   </div>
 
@@ -70,6 +67,26 @@ require_once __DIR__ . '/functions.php';
           <li class="nav-item"><a class="nav-link" href="<?= BASE_PATH ?>/cybermobbing/">Cybermobbing</a></li>
           <li class="nav-item"><a class="nav-link" href="<?= BASE_PATH ?>/zivilcourage/">Zivilcourage</a></li>
           <li class="nav-item"><a class="nav-link" href="<?= BASE_PATH ?>/moodle/">Moodle</a></li>
+
+          <!-- 🔸 Visuelle Trennung -->
+          <li class="nav-item d-none d-md-block">
+            <span class="nav-link disabled text-muted">|</span>
+          </li>
+
+          <!-- 🔐 Login / 🚪 Logout -->
+          <?php if (isset($_SESSION['user_role']) && $_SESSION['user_role'] === 'admin'): ?>
+            <li class="nav-item">
+              <a class="nav-link text-danger" href="<?= ADMIN_PATH ?>/logout.php">
+                <i class="bi bi-box-arrow-right"></i> Logout
+              </a>
+            </li>
+          <?php else: ?>
+            <li class="nav-item">
+              <a class="nav-link text-success" href="<?= ADMIN_PATH ?>/login.php">
+                <i class="bi bi-lock-fill"></i> Login
+              </a>
+            </li>
+          <?php endif; ?>
         </ul>
       </div>
     </div>

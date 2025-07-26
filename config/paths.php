@@ -45,9 +45,10 @@ if (!defined('QUIZ_PATH')) {
   define('QUIZ_PATH', MODULE_CYBER . '/quiz');
 }
 
-if (!defined('QUIZ_ADMIN_PATH')) {
-  define('QUIZ_ADMIN_PATH', QUIZ_PATH . '/admin');
+if (!defined('ADMIN_PATH')) {
+  define('ADMIN_PATH', BASE_PATH . '/admin');
 }
+
 if (!defined('QUIZ_JS_PATH')) {
   define('QUIZ_JS_PATH', '/test/cybermobbing/js');
 }
