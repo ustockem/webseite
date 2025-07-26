@@ -1,0 +1,17 @@
+# Rewrite-Modul aktivieren
+RewriteEngine On
+
+# Clean URLs ermöglichen (z. B. /seite statt index.php?page=seite)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)$ index.php?page=$1 [QSA,L]
+
+# Schutz für Umgebungsdateien
+<FilesMatch "^\.env">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+
+# Eigene Fehlerseiten definieren (optional)
+ErrorDocument 404 /404.html
+ErrorDocument 403 /403.html

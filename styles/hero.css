@@ -1,0 +1,42 @@
+/* HERO-STYLES — visuelle Feinheiten zur Bootstrap-Struktur */
+
+.hero {
+  background: var(--gradient-bg);
+  padding-top: 180px; /* Header-Offset */
+  padding-bottom: 2rem;
+  min-height: 50vh;
+}
+
+.hero a {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+
+.hero p {
+  font-size: 1.2em;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.4;
+}
+
+/* Mobile Anpassung */
+@media screen and (max-width: 768px) {
+  .hero {
+    padding-top: 100px;
+    min-height: 40vh;
+  }
+
+  .hero h1 {
+    font-size: 2em;
+  }
+
+  .hero p {
+    font-size: 1em;
+  }
+}

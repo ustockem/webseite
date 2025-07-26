@@ -1,0 +1,29 @@
+/* CONSENT-BOX (Cookie-Hinweis) */
+
+#consent-box {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+
+  background: var(--gradient-bg);
+  color: #ffffff;
+
+  font-size: 14px;
+  text-align: center;
+  padding: 12px;
+
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Links innerhalb der Box */
+#consent-box a {
+  color: #ffffff;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+#consent-box a:hover {
+  color: rgba(255, 255, 255, 0.85);
+}

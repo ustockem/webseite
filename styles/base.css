@@ -1,0 +1,103 @@
+/* === Webfonts: Montserrat === */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../assets/fonts/montserrat/Montserrat-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../assets/fonts/montserrat/Montserrat-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../assets/fonts/montserrat/Montserrat-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../assets/fonts/montserrat/Montserrat-SemiBoldItalic.woff2') format('woff2');
+  font-weight: 600;
+  font-style: italic;
+}
+
+/* === Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === Variablen === */
+:root {
+  --bs-font-sans-serif: 'Montserrat', system-ui, sans-serif;
+  --gradient-bg: linear-gradient(to right, #005a87, #00a6a6);
+  --farbe-lehrer: #2e7d32;
+  --farbe-schueler: #0288d1;
+  --farbe-eltern: #fbc02d;
+}
+
+/* === Grundlayout === */
+body {
+  font-family: var(--bs-font-sans-serif);
+  background: var(--gradient-bg);
+  color: #ffffff;
+  line-height: 1.5;
+}
+
+h2, h3 {
+  font-weight: 600;
+}
+
+/* === Container === */
+.container {
+  max-width: 100%;
+  padding: 1rem;
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+
+/* === Hauptinhalt === */
+main {
+  padding-top: 180px;
+}
+@media (max-width: 768px) {
+  main {
+    padding-top: 180px;
+  }
+}
+
+/* === Buttons und Karten === */
+.card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-text {
+  flex-grow: 1;
+}
+
+.btn {
+  margin-top: auto;
+}
+
+/* === Footer === */
+footer .container-fluid {
+  background: var(--gradient-bg);
+  color: #fff;
+  padding-left: 0;
+  padding-right: 0;
+}
+footer .container-fluid a {
+  color: #ffffff;
+}
+footer .container-fluid:hover a {
+  color: #f0d9d9;
+}

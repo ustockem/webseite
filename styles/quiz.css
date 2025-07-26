@@ -1,0 +1,27 @@
+body {
+  font-family: sans-serif;
+  max-width: 600px;
+  margin: auto;
+}
+
+.frage {
+  margin-bottom: 20px;
+}
+
+.antwort {
+  display: block;
+  margin: 5px 0;
+}
+
+.korrekt {
+  color: green;
+}
+
+.falsch {
+  color: red;
+}
+
+.erklärung {
+  margin-top: 10px;
+  font-style: italic;
+}

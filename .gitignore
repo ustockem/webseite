@@ -1,0 +1,9 @@
+# Umgebungsdateien
+.env
+
+# Composer-Ordner
+/vendor/
+
+# Logs und temporäres
+*.log
+*.tmp

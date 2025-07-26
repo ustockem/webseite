@@ -1,0 +1,1 @@
+console.log("Matomo mock geladen – lokal keine echte Analyse");

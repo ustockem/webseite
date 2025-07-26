@@ -1,0 +1,35 @@
+/* FOOTER-STILE */
+
+footer {
+  font-size: 0.9em;
+  text-align: center;
+  margin-top: 3em;
+  color: #fff;
+  background: var(--gradient-bg);
+  padding: 1.5em 0;
+}
+
+/* Links im Footer */
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+footer a:hover {
+  color: #f0d9d9;
+  text-decoration: underline;
+}
+
+/* Container-Füllung */
+footer .container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Optionaler zusätzlicher Abschnitt */
+section.container.my-5 .bg-light {
+  background: linear-gradient(to right, #e9ecef, #f8f9fa);
+  flex-grow: 1;
+  color: #212529;
+}

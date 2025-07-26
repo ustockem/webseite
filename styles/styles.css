@@ -1,0 +1,22 @@
+/* === Zentrale Style-Datei für ulrichstockem.de === */
+
+/* Globales Design (Schriften, Farben, Grundlayout) */
+@import url('base.css');
+
+/* Navigationsleiste */
+@import url('navbar.css');
+
+/* Hero-Bereich oder Slogan-Sektion */
+@import url('hero.css');
+
+/* Footer & Seitenabschluss */
+@import url('footer.css');
+
+/* Consent-Meldung (Cookies, Tracking etc.) */
+@import url('consent.css');
+
+/* Quiz-Modul (isoliert) */
+@import url('quiz.css');
+
+/* Admin-Bereich / Backend */
+@import url('admin.css');

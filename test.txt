@@ -1,0 +1,194 @@
+test
+├── .env
+├── .gitignore
+├── .htaccess.bak
+├── achtsamkeit
+│   └── index.php
+├── assets
+│   └── fonts
+│       └── montserrat
+│           ├── Montserrat-Bold.woff2
+│           ├── Montserrat-Italic.woff2
+│           ├── Montserrat-Regular.woff2
+│           └── Montserrat-SemiBoldItalic.woff2
+├── composer.json
+├── composer.lock
+├── config
+│   ├── config.php
+│   ├── constants.php
+│   ├── database.php
+│   ├── env.php
+│   ├── paths.php
+│   ├── protect.php
+│   ├── session.php
+│   ├── test.txt
+│   └── validateEnv.php
+├── consent.js
+├── content
+├── cybermobbing
+│   ├── index.php
+│   ├── js
+│   │   └── quiz.js
+│   └── quiz
+│       ├── assets
+│       ├── get-questions.php
+│       ├── index.php
+│       └── templates
+├── dotenv-test.php
+├── inc
+│   ├── footer.php
+│   ├── functions.php
+│   └── header.php
+├── index.php
+├── js
+│   └── test.txt
+├── make-hash.php
+├── media
+│   ├── audios
+│   │   └── potcast_behoerdenspiegel.mp3
+│   └── img
+│       ├── favicon.ico
+│       ├── Logo_AiN_transparent_weiss10.svg
+│       └── muTiger_Logo_transparent_klein.png
+├── moodle
+│   └── index.php
+├── styles
+│   ├── admin.css
+│   ├── base.css
+│   ├── consent.css
+│   ├── footer.css
+│   ├── hero.css
+│   ├── navbar.css
+│   ├── quiz.css
+│   └── styles.css
+├── vendor
+│   ├── autoload.php
+│   ├── bootstrap
+│   │   ├── css
+│   │   │   └── bootstrap.min.css
+│   │   └── js
+│   │       └── bootstrap.bundle.min.js
+│   ├── composer
+│   │   ├── autoload_classmap.php
+│   │   ├── autoload_files.php
+│   │   ├── autoload_namespaces.php
+│   │   ├── autoload_psr4.php
+│   │   ├── autoload_real.php
+│   │   ├── autoload_static.php
+│   │   ├── ClassLoader.php
+│   │   ├── installed.json
+│   │   ├── installed.php
+│   │   ├── InstalledVersions.php
+│   │   ├── LICENSE
+│   │   └── platform_check.php
+│   ├── graham-campbell
+│   │   └── result-type
+│   │       ├── composer.json
+│   │       ├── LICENSE
+│   │       └── src
+│   │           ├── Error.php
+│   │           ├── Result.php
+│   │           └── Success.php
+│   ├── jquery
+│   │   └── jquery.min.js
+│   ├── phpoption
+│   │   └── phpoption
+│   │       ├── composer.json
+│   │       ├── LICENSE
+│   │       └── src
+│   │           └── PhpOption
+│   │               ├── LazyOption.php
+│   │               ├── None.php
+│   │               ├── Option.php
+│   │               └── Some.php
+│   ├── symfony
+│   │   ├── polyfill-ctype
+│   │   │   ├── bootstrap.php
+│   │   │   ├── bootstrap80.php
+│   │   │   ├── composer.json
+│   │   │   ├── Ctype.php
+│   │   │   ├── LICENSE
+│   │   │   └── README.md
+│   │   ├── polyfill-mbstring
+│   │   │   ├── bootstrap.php
+│   │   │   ├── bootstrap80.php
+│   │   │   ├── composer.json
+│   │   │   ├── LICENSE
+│   │   │   ├── Mbstring.php
+│   │   │   ├── README.md
+│   │   │   └── Resources
+│   │   │       └── unidata
+│   │   │           ├── caseFolding.php
+│   │   │           ├── lowerCase.php
+│   │   │           ├── titleCaseRegexp.php
+│   │   │           └── upperCase.php
+│   │   └── polyfill-php80
+│   │       ├── bootstrap.php
+│   │       ├── composer.json
+│   │       ├── LICENSE
+│   │       ├── Php80.php
+│   │       ├── PhpToken.php
+│   │       ├── README.md
+│   │       └── Resources
+│   │           └── stubs
+│   │               ├── Attribute.php
+│   │               ├── PhpToken.php
+│   │               ├── Stringable.php
+│   │               ├── UnhandledMatchError.php
+│   │               └── ValueError.php
+│   └── vlucas
+│       └── phpdotenv
+│           ├── composer.json
+│           ├── LICENSE
+│           └── src
+│               ├── Dotenv.php
+│               ├── Exception
+│               │   ├── ExceptionInterface.php
+│               │   ├── InvalidEncodingException.php
+│               │   ├── InvalidFileException.php
+│               │   ├── InvalidPathException.php
+│               │   └── ValidationException.php
+│               ├── Loader
+│               │   ├── Loader.php
+│               │   ├── LoaderInterface.php
+│               │   └── Resolver.php
+│               ├── Parser
+│               │   ├── Entry.php
+│               │   ├── EntryParser.php
+│               │   ├── Lexer.php
+│               │   ├── Lines.php
+│               │   ├── Parser.php
+│               │   ├── ParserInterface.php
+│               │   └── Value.php
+│               ├── Repository
+│               │   ├── Adapter
+│               │   │   ├── AdapterInterface.php
+│               │   │   ├── ApacheAdapter.php
+│               │   │   ├── ArrayAdapter.php
+│               │   │   ├── EnvConstAdapter.php
+│               │   │   ├── GuardedWriter.php
+│               │   │   ├── ImmutableWriter.php
+│               │   │   ├── MultiReader.php
+│               │   │   ├── MultiWriter.php
+│               │   │   ├── PutenvAdapter.php
+│               │   │   ├── ReaderInterface.php
+│               │   │   ├── ReplacingWriter.php
+│               │   │   ├── ServerConstAdapter.php
+│               │   │   └── WriterInterface.php
+│               │   ├── AdapterRepository.php
+│               │   ├── RepositoryBuilder.php
+│               │   └── RepositoryInterface.php
+│               ├── Store
+│               │   ├── File
+│               │   │   ├── Paths.php
+│               │   │   └── Reader.php
+│               │   ├── FileStore.php
+│               │   ├── StoreBuilder.php
+│               │   ├── StoreInterface.php
+│               │   └── StringStore.php
+│               ├── Util
+│               │   ├── Regex.php
+│               │   └── Str.php
+│               └── Validator.php
+└── zivilcourage
+    └── index.php
