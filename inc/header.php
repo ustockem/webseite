@@ -28,7 +28,7 @@ require_once __DIR__ . '/functions.php';
 <body>
 
 <header>
-  <!-- Mobile Header (< 768px) -->
+  <!-- Mobile Header -->
   <div class="header-mobile d-flex justify-content-between align-items-center px-3 py-2 d-md-none" style="background-color:#005a87; color:#fff;">
     <div class="d-flex align-items-center gap-2">
       <img src="<?= IMG_PATH ?>/Logo_AiN_transparent_weiss10.svg" alt="Logo der muTiger-Schule" width="36">
@@ -38,7 +38,7 @@ require_once __DIR__ . '/functions.php';
     </button>
   </div>
 
-  <!-- Desktop Header (≥ 768px) -->
+  <!-- Desktop Header -->
   <div class="header-top py-3 d-none d-md-block">
     <div class="container d-flex align-items-center gap-3">
       <div class="d-flex align-items-center gap-2">
@@ -68,19 +68,29 @@ require_once __DIR__ . '/functions.php';
           <li class="nav-item"><a class="nav-link" href="<?= BASE_PATH ?>/zivilcourage/">Zivilcourage</a></li>
           <li class="nav-item"><a class="nav-link" href="<?= BASE_PATH ?>/moodle/">Moodle</a></li>
 
-          <!-- 🔸 Visuelle Trennung -->
           <li class="nav-item d-none d-md-block">
             <span class="nav-link disabled text-muted">|</span>
           </li>
 
-          <!-- 🔐 Login / 🚪 Logout -->
           <?php if (isset($_SESSION['user_role']) && $_SESSION['user_role'] === 'admin'): ?>
-            <li class="nav-item">
-              <a class="nav-link text-danger" href="<?= ADMIN_PATH ?>/logout.php">
-                <i class="bi bi-box-arrow-right"></i> Logout
+            <!-- 🔧 Admin-Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-primary" href="#" id="adminDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-gear"></i> Admin
               </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="adminDropdown">
+                <li>
+                  <a class="dropdown-item" href="<?= BASE_PATH ?>/cybermobbing/quiz/admin/questions.php">
+                    <i class="bi bi-card-list me-2"></i> Fragenverwaltung
+                  </a>
+                </li>
+                <li><a class="dropdown-item" href="<?= ADMIN_PATH ?>/users.php"><i class="bi bi-people-fill me-2"></i>Benutzer</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item text-danger" href="<?= ADMIN_PATH ?>/logout.php"><i class="bi bi-box-arrow-right me-2"></i>Logout</a></li>
+              </ul>
             </li>
           <?php else: ?>
+            <!-- 🔐 Login für Gäste -->
             <li class="nav-item">
               <a class="nav-link text-success" href="<?= ADMIN_PATH ?>/login.php">
                 <i class="bi bi-lock-fill"></i> Login

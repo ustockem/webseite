@@ -73,4 +73,8 @@ if (!defined('VENDOR_PATH')) {
   define('JS_PATH', '/js');
 }
 
+if (!defined('VENDOR_PATH')) {
+  define('QUIZ_ADMIN_PATH', BASE_PATH . '/cybermobbing/quiz/admin');
+}
+
 ?>
