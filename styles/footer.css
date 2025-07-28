@@ -20,16 +20,22 @@ footer a:hover {
   color: #f0d9d9;
   text-decoration: underline;
 }
-
-/* Container-Füllung */
-footer .container-fluid {
-  padding-left: 0;
-  padding-right: 0;
-}
-
 /* Optionaler zusätzlicher Abschnitt */
 section.container.my-5 .bg-light {
   background: linear-gradient(to right, #e9ecef, #f8f9fa);
   flex-grow: 1;
   color: #212529;
+}
+
+footer .container-fluid {
+  background: var(--gradient-bg);
+  color: #fff;
+  padding-left: 0;
+  padding-right: 0;
+}
+footer .container-fluid a {
+  color: #ffffff;
+}
+footer .container-fluid:hover a {
+  color: #f0d9d9;
 }

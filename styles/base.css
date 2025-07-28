@@ -38,6 +38,10 @@
   --farbe-lehrer: #2e7d32;
   --farbe-schueler: #0288d1;
   --farbe-eltern: #fbc02d;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
 }
 
 /* === Grundlayout === */
@@ -48,15 +52,27 @@ body {
   line-height: 1.5;
 }
 
+html {
+  font-size: clamp(1rem, 2.2vw, 1.2rem);
+}
+
+h1, h2, h3 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+
 h2, h3 {
   font-weight: 600;
 }
 
 /* === Container === */
+
 .container {
-  max-width: 100%;
+  width: 100%;
+  max-width: 1200px; /* oder 960px je nach Layout */
+  margin: 0 auto;
   padding: 1rem;
 }
+
 @media (min-width: 768px) {
   .container {
     max-width: 800px;
@@ -66,11 +82,11 @@ h2, h3 {
 
 /* === Hauptinhalt === */
 main {
-  padding-top: 180px;
+  padding-top: 60px;
 }
 @media (max-width: 768px) {
   main {
-    padding-top: 180px;
+    padding-top: 60px;
   }
 }
 
@@ -88,16 +104,21 @@ main {
   margin-top: auto;
 }
 
-/* === Footer === */
-footer .container-fluid {
-  background: var(--gradient-bg);
-  color: #fff;
-  padding-left: 0;
-  padding-right: 0;
+body {
+  padding-bottom: 4rem; /* für Scrollfreiheit */
 }
-footer .container-fluid a {
-  color: #ffffff;
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
-footer .container-fluid:hover a {
-  color: #f0d9d9;
+
+ul, ol {
+  list-style: none;
+}
+
+button, input, textarea {
+  font-family: inherit;
+  font-size: inherit;
 }

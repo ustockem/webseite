@@ -2,9 +2,17 @@
 
 .hero {
   background: var(--gradient-bg);
-  padding-top: 180px; /* Header-Offset */
+  padding-top: clamp(40px, 10vh, 120px);
   padding-bottom: 2rem;
   min-height: 50vh;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .hero a {
@@ -13,16 +21,15 @@
 }
 
 .hero h1 {
-  font-size: 2.5em;
-  font-weight: 700;
-  margin-bottom: 0.5em;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+}
+.hero p {
+  font-size: clamp(1rem, 4vw, 1.2rem);
 }
 
 .hero p {
-  font-size: 1.2em;
-  max-width: 600px;
+  max-width: 90%;
   margin: 0 auto;
-  line-height: 1.4;
 }
 
 /* Mobile Anpassung */
@@ -38,5 +45,15 @@
 
   .hero p {
     font-size: 1em;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding-top: 200px;
+    min-height: 60vh;
+  }
+  .hero h1 {
+    font-size: 3rem;
   }
 }

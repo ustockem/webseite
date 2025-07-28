@@ -1,27 +1,45 @@
-body {
-  font-family: sans-serif;
+.quiz-wrapper {
   max-width: 600px;
-  margin: auto;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
 .frage {
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
 }
 
 .antwort {
-  display: block;
-  margin: 5px 0;
-}
-
-.korrekt {
-  color: green;
-}
-
-.falsch {
-  color: red;
+  margin: 0.5rem 0;
+  font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
 .erklärung {
-  margin-top: 10px;
-  font-style: italic;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  margin-top: 0.75rem;
+}
+
+.korrekt {
+  color: #2e7d32;
+  font-weight: bold;
+  background-color: #e8f5e9;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.falsch {
+  color: #c62828;
+  font-weight: bold;
+  background-color: #ffebee;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+@media (max-width: 480px) {
+  .quiz-wrapper {
+    padding: 0.5rem;
+  }
+  .frage, .antwort, .erklärung {
+    font-size: 0.95rem;
+  }
 }

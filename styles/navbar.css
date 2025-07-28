@@ -2,7 +2,15 @@
 
 /* Navbar Hintergrund & Farbverlauf */
 .custom-navbar {
-  background: linear-gradient(to right, #005a87, #00a6a6) !important;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2vw;
+}
+
+.navbar-collapse {
+  transition: all 0.3s ease-in-out;
 }
 
 /* Links in der Navbar */
@@ -35,4 +43,57 @@
   outline: 2px dashed white;
   outline-offset: 4px;
   box-shadow: none;
+}
+
+/* === Responsives Grundlayout === */
+.custom-navbar {
+  padding: 1rem 2vw;
+}
+
+/* Nav-Verhalten bei kleinen Screens */
+@media (max-width: 768px) {
+  .custom-navbar .navbar-nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .custom-navbar .nav-item {
+    width: 100%;
+  }
+
+  .custom-navbar .nav-link {
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+  }
+
+  /* Trennlinie entfernen */
+  .custom-navbar .nav-item.d-none.d-md-block {
+    display: none !important;
+  }
+
+  .navbar-collapse {
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .navbar-collapse.show {
+    display: flex;
+  }
+}
+
+
+/* Dropdown Styling */
+.dropdown-menu {
+  background-color: rgba(0, 90, 135, 0.95);
+  border: none;
+}
+
+.dropdown-menu .dropdown-item {
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }

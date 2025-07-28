@@ -27,7 +27,7 @@ include 'templates/quiz-template.php';
 </main>
 
 <!-- Externes JavaScript einbinden -->
-<script src="/assets/js/quiz.js"></script>
+<script src="../js/quiz.js"></script>
 
 <?php
 require_once __DIR__ . '/../../inc/footer.php';

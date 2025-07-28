@@ -63,7 +63,7 @@ if (!defined('MODULE_ZIVILCOURAGE')) {
 
 // 🔧 Optionale Fonts oder Vendor-Verzeichnisse
 if (!defined('FONTS_PATH')) {
-  define('FONTS_PATH', BASE_PATH . '/assets/fonts');
+  define('FONTS_PATH', BASE_PATH . 'assets/fonts');
 }
 if (!defined('VENDOR_PATH')) {
   define('VENDOR_PATH', BASE_PATH . '/vendor');
